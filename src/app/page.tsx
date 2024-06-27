@@ -10,7 +10,7 @@ export default function Home() {
           Hello World {todayDate}
         </h1>
         <Link className="hover:text-blue-600" href="/posts">
-          See posts {todayDate}
+          See posts. {todayDate}
         </Link>
       </div>
     </main>
