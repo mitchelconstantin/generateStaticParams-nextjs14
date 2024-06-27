@@ -1,5 +1,6 @@
 import type { Post } from "@/types/PostProps";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
 
@@ -14,6 +15,9 @@ export async function generateStaticParams() {
 }
 
 export default async function Post({ params }: { params: { postId: string } }) {
+  if (params.postId === "10") {
+    notFound();
+  }
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${params.postId}`,
   );
