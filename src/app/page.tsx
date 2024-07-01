@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function Home() {
-  const todayDate = Date.now().toString();
+  const todayDate = new Date().toLocaleString();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

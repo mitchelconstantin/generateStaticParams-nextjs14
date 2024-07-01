@@ -7,7 +7,7 @@ export default async function NotFound() {
 
   return (
     <div>
-      NotFound at top level! {todayDate}
+      NotFound at in posts! {todayDate}
       <a href="/">Go back home.</a>
     </div>
   );
