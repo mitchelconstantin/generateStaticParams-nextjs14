@@ -39,7 +39,7 @@ const PostsList = async () => {
       return "When cachable but not pre built, the page is built at request time and eventually served from cache. The return is delayed with no loading experience, just a pause. Future visits are instant. This is the scenario where we want to be able to cache the page, but we don't want to pre-build it. It doesn't seem possible to have a loading experience in this scenario.";
     }
     if (!isPostCached(postId) && isPostPreBuilt(postId)) {
-      return "When not cachable and is pre-built, when partial static generation is used, you get a static loading page served from cache created at build time, and the full page loads in dynmaically. The loading page is instant. The final page is not cached at all, since it is dyynamic";
+      return "When not cachable and is pre-built, when partial static generation is used, you get a static loading page served from cache created at build time, and the full page loads in dynamically. The loading page is instant. The final page is not cached at all, since it is dynamic";
     }
     if (!isPostCached(postId) && !isPostPreBuilt(postId)) {
       return "When not cachable and not pre-built, when partial static generation is used, the loading page is built on demand and served from the cache, future visits will use this cached version. The final page is not cached at all and is dynamic.";
